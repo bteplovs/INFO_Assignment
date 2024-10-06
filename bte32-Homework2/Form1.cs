@@ -109,6 +109,7 @@ namespace bte32_Homework2
         {
             // loads the .txt
             Data = File.ReadAllLines("Cruise.txt");
+            // .ReadAllLines because the text file is small
         }
 
         private void Selected()
@@ -125,7 +126,7 @@ namespace bte32_Homework2
             // once a ship is selected initilise new list with only cruises offered by that ship
             // this is done by appending the data items that share the ship num in index[1]
             List<string> newShipData = new List<string>();
-
+            // using a list over array allows for easier appending
             foreach (string line in Data)
             {
                 string[] parts = line.Split(',');
@@ -162,9 +163,9 @@ namespace bte32_Homework2
         private void InfoOfSelectedCruise()
         {
             // once a cruise is selected initilise new list with corresponding cruise dates/times/cost
-            // When a cruise type is selected, dates/times/costs are rewritten to cruisedata as to refresh with each selection
+            // When a cruise type is selected, dates/times/costs are rewritten to cruise data as to refresh with each selection
             List<string> newCruiseData = new List<string>();
-
+            // using a list over array allows for easier appending
             foreach (string line in shipData)
             {
                 string[] parts = line.Split(',');
