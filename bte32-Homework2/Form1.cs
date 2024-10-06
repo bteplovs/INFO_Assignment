@@ -118,10 +118,6 @@ namespace bte32_Homework2
             {
                 cruiseValue = newCruiseValue;
             }
-            //else
-            //{
-                //cruiseValue = 0;
-            //}
         }
 
         private void CruisesOfSelectedShip()
